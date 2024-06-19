@@ -1,37 +1,27 @@
 
+package sile7.Modeed;
+
 import java.util.Scanner;
 
 
-public class NhanVien {
-    private String maNv;
-    private String tenNV;
-    private double luong;
-    private int namsinh;
+public abstract class NhanVien {
+     private String hoTen;
+     private double luong;
 
     public NhanVien() {
     }
 
-    public NhanVien(String maNv, String tenNV, double luong, int namsinh) {
-        this.maNv = maNv;
-        this.tenNV = tenNV;
+    public NhanVien(String hoTen, double luong) {
+        this.hoTen = hoTen;
         this.luong = luong;
-        this.namsinh = namsinh;
     }
 
-    public String getMaNv() {
-        return maNv;
+    public String getHoTen() {
+        return hoTen;
     }
 
-    public void setMaNv(String maNv) {
-        this.maNv = maNv;
-    }
-
-    public String getTenNV() {
-        return tenNV;
-    }
-
-    public void setTenNV(String tenNV) {
-        this.tenNV = tenNV;
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
     }
 
     public double getLuong() {
@@ -42,33 +32,20 @@ public class NhanVien {
         this.luong = luong;
     }
 
-    public int getNamsinh() {
-        return namsinh;
-    }
-
-    public void setNamsinh(int namsinh) {
-        this.namsinh = namsinh;
-    }
-
     @Override
     public String toString() {
-        return "NhanVien{" + "maNv=" + maNv + ", tenNV=" + tenNV + ", luong=" + luong + ", namsinh=" + namsinh + '}';
+        return "NhanVien{" + "hoTen=" + hoTen + ", luong=" + luong + '}';
     }
-    public void nhapThongTin(){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Moi ban nhap ma NV: ");
-        maNv = sc.nextLine();
-        System.out.print("Moi ban nhap ten NV: ");
-        tenNV = sc.nextLine();
-        System.out.print("Moi ban nhap nam sinh: ");
-        namsinh = Integer.parseInt(sc.nextLine());
-        int tuoi = 2024 - namsinh;
-        do {            
-        System.out.print("Moi ban nhap luong: ");
-        luong = Double.parseDouble(sc.nextLine()); 
-         } while (luong <= 0);
-    }
-    public void inThongTin(){
-        System.out.println(toString());
-    }
+    
+    public void nhap(){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Moi ban nhap ho ten: ");
+         this.hoTen = sc.nextLine();
+         System.out.print("Moi ban nhap luong: ");
+         this.luong = Double.parseDouble(sc.nextLine());
+       }
+     public void xuat(){
+         System.out.print(toString());
+     }
+
 }
