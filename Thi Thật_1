@@ -1,0 +1,50 @@
+
+public class SinhVien {
+  String MaSV;
+  String TenSV;
+  boolean gioiTinh;
+  int namSinh;
+
+    public SinhVien() {
+    }
+
+    public SinhVien(String MaSV, String TenSV, boolean gioiTinh, int namSinh) {
+        this.MaSV = MaSV;
+        this.TenSV = TenSV;
+        this.gioiTinh = gioiTinh;
+        this.namSinh = namSinh;
+    }
+
+    public String getMaSV() {
+        return MaSV;
+    }
+
+    public void setMaSV(String MaSV) {
+        this.MaSV = MaSV;
+    }
+
+    public String getTenSV() {
+        return TenSV;
+    }
+
+    public void setTenSV(String TenSV) {
+        this.TenSV = TenSV;
+    }
+
+    public boolean isGioiTinh() {
+        return gioiTinh;
+    }
+
+    public void setGioiTinh(boolean gioiTinh) {
+        this.gioiTinh = gioiTinh;
+    }
+
+    public int getNamSinh() {
+        return namSinh;
+    }
+
+    public void setNamSinh(int namSinh) {
+        this.namSinh = namSinh;
+    }
+  
+}
