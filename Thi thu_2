@@ -1,0 +1,52 @@
+
+public class Student {
+    String ma;
+    String name;
+    String SDT;
+    Integer trangthai;
+
+    public Student() {
+    }
+
+    public Student(String ma, String name, String SDT, Integer trangthai) {
+        this.ma = ma;
+        this.name = name;
+        this.SDT = SDT;
+        this.trangthai = trangthai;
+    }
+
+    public String getMa() {
+        return ma;
+    }
+
+    public void setMa(String ma) {
+        this.ma = ma;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSDT() {
+        return SDT;
+    }
+
+    public void setSDT(String SDT) {
+        this.SDT = SDT;
+    }
+
+    public Integer getTrangthai() {
+        return trangthai;
+    }
+
+    public void setTrangthai(Integer trangthai) {
+        this.trangthai = trangthai;
+    }
+    
+    
+    
+}
