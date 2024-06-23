@@ -1,15 +1,16 @@
 
+package assignment;
+
 import java.util.Scanner;
 
-
-public class TruongPhong extends ChucVu{
+public class TruongPhong extends NhanVien{
     private double trachNhiem;
 
     public TruongPhong() {
     }
 
-    public TruongPhong(double trachNhiem, String macv, String tenCV, double phucap) {
-        super(macv, tenCV, phucap);
+    public TruongPhong(double trachNhiem, String maNv, String hoTen, double luongCB, String phongban) {
+        super(maNv, hoTen, luongCB, phongban);
         this.trachNhiem = trachNhiem;
     }
 
@@ -22,22 +23,25 @@ public class TruongPhong extends ChucVu{
     }
 
     @Override
-    public String toString() {
-        return super.toString()+"TruongPhong{" + "trachNhiem=" + trachNhiem + '}';
-    }
-
+     public void nhap(){
+        super.nhap();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Moi ban luong trach nhiem: ");
+       trachNhiem = sc.nextDouble();
+    } 
+    
     @Override
-    public void nhapThongTin() {
-        super.nhapThongTin();
-        Scanner sc =  new Scanner(System.in);
-        System.out.print("Moi ban nhap luong trach nhiem: ");
-        trachNhiem = Double.parseDouble(sc.nextLine());
-    }
-
-    @Override
-    public void inThongTin() {
-        super.inThongTin();
-        System.out.println(toString());
+    public void xuat(){
+        super.xuat();
+        System.out.print("Luong trach nhiem:"+trachNhiem);
+        
     }
     
+    @Override
+    public double getThuNhap() {
+       return super.luongCB + trachNhiem;
+    }
+
+    
+   
 }
