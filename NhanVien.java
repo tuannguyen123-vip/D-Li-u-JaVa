@@ -1,19 +1,26 @@
 
-package sile7.Modeed;
-
-import java.util.Scanner;
-
-
-public abstract class NhanVien {
-     private String hoTen;
-     private double luong;
+public class NhanVien {
+   private String maNV;
+   private String hoTen;
+   private boolean gioiTinh;
+   private String diaChi;
 
     public NhanVien() {
     }
 
-    public NhanVien(String hoTen, double luong) {
+    public NhanVien(String maNV, String hoTen, boolean gioiTinh, String diaChi) {
+        this.maNV = maNV;
         this.hoTen = hoTen;
-        this.luong = luong;
+        this.gioiTinh = gioiTinh;
+        this.diaChi = diaChi;
+    }
+
+    public String getMaNV() {
+        return maNV;
+    }
+
+    public void setMaNV(String maNV) {
+        this.maNV = maNV;
     }
 
     public String getHoTen() {
@@ -24,28 +31,20 @@ public abstract class NhanVien {
         this.hoTen = hoTen;
     }
 
-    public double getLuong() {
-        return luong;
+    public boolean isGioiTinh() {
+        return gioiTinh;
     }
 
-    public void setLuong(double luong) {
-        this.luong = luong;
+    public void setGioiTinh(boolean gioiTinh) {
+        this.gioiTinh = gioiTinh;
     }
 
-    @Override
-    public String toString() {
-        return "NhanVien{" + "hoTen=" + hoTen + ", luong=" + luong + '}';
+    public String getDiaChi() {
+        return diaChi;
     }
-    
-    public void nhap(){
-         Scanner sc = new Scanner(System.in);
-         System.out.print("Moi ban nhap ho ten: ");
-         this.hoTen = sc.nextLine();
-         System.out.print("Moi ban nhap luong: ");
-         this.luong = Double.parseDouble(sc.nextLine());
-       }
-     public void xuat(){
-         System.out.print(toString());
-     }
 
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
+   
 }
