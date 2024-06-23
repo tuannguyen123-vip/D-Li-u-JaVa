@@ -1,20 +1,58 @@
 
 package poly;
 
-public class Demo {
+import java.util.Scanner;
 
+public class Demo {
     public static void main(String[] args) {
-      Xhelper hp = new Xhelper(); // Muốn dùng phải tạo tên mục sang mục main
-       System.out.println(hp.sum(4,5));  //Tổng các số có thể nhiều hơn khi viết vào trong System.out.println(hp.sum(v.v..));
-      System.out.println(hp.sum(4,5,6));
-        System.out.println("Tong cac so:"+hp.sum(4,5,5,10,6));
-    
-        int a[]= {5,6,8,7,9,8}; //Tổng của cả mảng
-       System.out.println("tong cua mang la: "+hp.sum(a));
-    // Gọi biến(trường) Static, phương thức static
-    //Không cần tạo đối tượng, gọi trực tiếp TenLop.bienStatic
-    //Gọi TenLop.TenPhuongthucStatic()
-    Xhelper.bienStatic=100; //Gọi biến(trường) Static
-        System.out.println("Tong:"+Xhelper.Tinhtong(10,10)); //Gọi phương thức Static
-    }
+        PhongHocService phs = new PhongHocService();
+        Scanner sc = new Scanner(System.in);
+        while (true) {            
+            System.out.println("----------------------");
+            System.out.println("1.Nhap thong tin");
+            System.out.println("2.Xuat thong tin");
+            System.out.println("3.Xuat thong tin phong hoc tang 3");
+            System.out.println("4.Dem co bao nhieu phong hoc > 50 SV");
+            System.out.println("5.Sap xep phong hoc theo tang dan");
+            System.out.println("6.fakeData");
+            System.out.println("0.Thoat");
+            System.out.println("-----------------------");
+            System.out.print("Moi ban chon muc:");
+        int chon = sc.nextInt();
+            switch (chon) {
+                case 1:
+                    System.out.println("Moi ban su dung muc nay!!!"); 
+                    phs.nhapTT();
+                    break;
+                case 2:
+                    System.out.println("Moi ban su dung muc nay!!!"); 
+                   phs.xuatTT();
+                    break;
+                case 3:
+                    System.out.println("Moi ban su dung muc nay!!!"); 
+                   phs.timTang3();
+                   break;
+                case 4:
+                    System.out.println("Moi ban su dung muc nay!!!"); 
+                    phs.demSV();
+                    break;
+                case 5:
+                    System.out.println("Moi ban su dung muc nay!!!"); 
+                    phs.sapXepTang();
+                    phs.xuatTT();
+                    break;
+                case 6:
+                    System.out.println("Moi ban su dung muc nay!!!"); 
+                    phs.fakeData();
+                    break;
+                case 0:
+                    System.out.println("Cam on ban da su dung meun!!!"); 
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Moi ban chon lai muc???");
+            }
+        
+        }
+}
 }
